@@ -4,7 +4,7 @@ lista = []
 contador = 0
 
 while True:
-    perg = int(input("Escolher um valor (Valor negativo para cancelar): "))
+    perg = int(input("Escolha um valor (Valor negativo para cancelar): "))
     if perg >= 0:
         lista.append(perg)
     elif perg < 0:
@@ -44,7 +44,7 @@ elif escolha == "d":
 
 qtt_element = len(lista_true)
 
-print(f'Existem {qtt_element} elementos na sua lista!!!!!!')
+print(f'Existem {qtt_element} elementos que tem na sua lista!')
 
 
 
@@ -57,30 +57,30 @@ while True:
     resp = int(input())
 
     if resp == 1:
-        pilha = int(input("Voce quer remover o valor: [valor negativo para cancelar] "))
+        pilha = int(input("Voce deseja remover o valor: [valor negativo para cancelar] "))
         if not pilha in lista_true:
-            input("Não existe essa posicao na lista!!! Aperte enter para continuar!!!!  ")
+            input("Não tem essa posicao na lista! Aperte enter para continuar!  ")
             print(lista_true)
-            print(f'Existem {qtt_element} elementos na sua lista!!!!!!')
+            print(f'Existem {qtt_element} elementos que tem na sua lista!')
         elif pilha in lista_true:
             lista_true.remove(pilha)
             print(lista_true)
             qtt_element -= 1
             contador += 1
-            print(f'Existem {qtt_element} elementos na sua lista!!!!!!')
+            print(f'Existem {qtt_element} elementos que tem na sua lista!!!!!!')
         elif pilha < 0:
             break
     
     elif resp == 2:
         
-        perg2 = int(input("Qual posicao da lista voce quer colocar um valor?: "))-1
+        perg2 = int(input("Qual posicao da lista voce deseja colocar um valor?: "))-1
         perg_value = int(input("Qual o valor?: "))
 
         comeco = []
         fim = []
 
         if perg2 > len(lista_true):
-            input("Nao existe essa posicao na pilha")
+            input("Nao tem essa posicao na pilha")
         for i, value in enumerate(lista_true):
             if i < perg2:
                 comeco.append(value)
@@ -92,7 +92,7 @@ while True:
         print(lista_true)
         qtt_element += 1
         contador += 1
-        print(f'Existem {qtt_element} elementos na sua lista!!!!!!')
+        print(f'Existem {qtt_element} elementos que tem sua lista!')
     
     elif resp == 3:
         break
@@ -101,4 +101,4 @@ while len(lista_true) != 0:
     print(lista_true)
     del(lista_true[-1])
 
-print(f'Foram feitas {contador} operacoes na pilha!!!!!!!')
+print(f'Foram feitas {contador} operacoes na pilha!')
